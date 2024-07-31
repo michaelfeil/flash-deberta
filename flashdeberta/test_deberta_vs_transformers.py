@@ -1,9 +1,10 @@
-from transformers_deberta import DebertaV2ForSequenceClassification
+from transformers_deberta import DebertaV2ForSequenceClassification, DisentangledSelfAttention
+
+
 import torch
 from transformers import AutoTokenizer
+
 def test_prompt_guard():
-
-
     model_id = "meta-llama/Prompt-Guard-86M"
     revision = "92dc6f25bad4a34eb4362aebb9422f9cde6dc475"
     tokenizer = AutoTokenizer.from_pretrained(model_id, revision=revision)
